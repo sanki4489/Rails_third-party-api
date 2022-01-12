@@ -1,0 +1,7 @@
+<%= form_with model: @books do |f| %>
+    Rank: <%= f.text_field :rank %>
+    Title: <%= f.text_field :title %>
+    Author: <%= f.text_field :author %>
+    Description: <%= f.text_field :description %>
+    <%= f.submit 'Add Book' %>
+<% end %>

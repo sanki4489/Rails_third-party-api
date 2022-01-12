@@ -1,0 +1,19 @@
+<% if flash[:notice] %>
+    <%= flash[:notice] %>
+<% end%>    
+<table >
+    <tr>
+        <td>Rank</td>
+        <td>Title</td>
+        <td>Author</td>
+        <td>Descrption</td>  
+    </tr>
+    <% @books.each do |b|%>
+    <tr>
+        <td><%= b.rank %></td>
+        <td><%= b.title %></td>
+        <td><%= b.author %></td>
+    <td><%= truncate(b.description) %></td></tr>
+    <%end%>
+</table>
+<%= link_to "Add Book", new_books_path %>
